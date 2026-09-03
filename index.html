@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volcán Proyecta — Piloto V3</title>
+  <meta name="description" content="Prototipo moderno Volcán Proyecta">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- CABECERA CORPORATIVA VOLCÁN -->
+  <header class="corporate-header">
+    <div class="top-strip">
+      <div class="container top-strip-inner">
+        <span></span>
+        <nav>
+          <a href="#">Trabaja con Nosotros</a>
+          <a href="#">Canal de Denuncias</a>
+          <a href="#">Asistencia Clientes</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="brand-search container">
+      <button class="logo-btn" data-go="dashboard" aria-label="Inicio Volcán">
+        <img src="assets/img/volcan-110.png" alt="Volcán 110 años">
+      </button>
+      <div class="global-search">
+        <input id="globalSearch" type="search" placeholder="Buscar productos y soluciones">
+        <button id="searchButton" aria-label="Buscar"><span></span></button>
+      </div>
+    </div>
+
+    <div class="blue-nav">
+      <div class="container blue-nav-inner">
+        <nav>
+          <button data-demo="Quiénes Somos">QUIÉNES SOMOS</button>
+          <button data-demo="Sostenibilidad">SOSTENIBILIDAD</button>
+          <button data-demo="Inversionistas">INVERSIONISTAS</button>
+          <button data-go="solutions">SOLUCIONES CONSTRUCTIVAS</button>
+          <button data-demo="Productos">PRODUCTOS <i></i></button>
+          <button class="projecta-main active" data-go="dashboard">VOLCÁN PROYECTA</button>
+          <button class="cart-btn" data-toast="Carro simulado para el piloto">⌑</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- SUBNAV APP -->
+  <div class="app-subnav">
+    <div class="container app-subnav-inner">
+      <div class="app-brand">
+        <span>VP</span>
+        <div><strong>Volcán Proyecta</strong><small>Piloto vivienda</small></div>
+      </div>
+      <nav>
+        <button class="active" data-go="dashboard">Mis proyectos</button>
+        <button data-go="config">Nuevo proyecto</button>
+        <button data-go="solutions">Soluciones</button>
+        <button data-go="export">Documentos</button>
+      </nav>
+      <button class="back-volcan" data-demo="Volver a Volcán">← Volver a Volcán</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- DASHBOARD MODERNO -->
+    <section class="view active" data-view="dashboard">
+      <div class="dashboard-hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">VOLCÁN PROYECTA</span>
+            <h1>Diseña, resuelve y construye con mayor confianza.</h1>
+            <p>Convierte una idea en una propuesta constructiva Volcán: configura tu proyecto, ajusta espacios y obtén recomendaciones de materiales.</p>
+            <div class="hero-cta-row">
+              <button class="btn btn-red" data-go="config">＋ Crear nuevo proyecto</button>
+              <button class="btn btn-ghost" id="uploadSketchBtn">⇧ Subir e interpretar boceto</button>
+              <input id="sketchInput" type="file" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-photo"></div>
+            <div class="hero-float">
+              <span class="pulse-dot"></span>
+              <div><small>Proyecto activo</small><strong>Vivienda Los Robles · 90 m²</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container dashboard-content">
+        <section class="kpi-grid">
+          <article class="kpi-card">
+            <span class="kpi-icon red">▣</span>
+            <div><small>Proyectos totales</small><strong>12</strong><span>+3 este mes</span></div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon blue">♡</span>
+            <div><small>Proyectos guardados</small><strong>8</strong><span>67% del total</span></div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon green">$</span>
+            <div><small>Cotizaciones</small><strong>5</strong><span>2 pendientes</span></div>
+          </article>
+          <article class="kpi-card">
+            <span class="kpi-icon violet">✓</span>
+            <div><small>Soluciones listas</small><strong>4</strong><span>Listas para exportar</span></div>
+          </article>
+        </section>
+
+        <div class="dashboard-layout">
+          <div class="dashboard-main">
+            <section class="continue-modern">
+              <div class="section-title-row">
+                <div><span class="section-kicker">CONTINUAR</span><h2>Retoma donde quedaste</h2></div>
+                <button class="small-link">Ver historial →</button>
+              </div>
+
+              <article class="continue-card-modern">
+                <div class="continue-image">
+                  <span class="status-pill editing">EN DISEÑO</span>
+                </div>
+                <div class="continue-info">
+                  <div>
+                    <small>Última edición · hace 2 horas</small>
+                    <h3>Vivienda Los Robles</h3>
+                    <p>Santiago · 90 m² · Vivienda · Aislación térmica</p>
+                  </div>
+                  <div class="progress-area">
+                    <div class="progress-text"><span>Avance del proyecto</span><b>58%</b></div>
+                    <div class="progress-bar"><i style="width:58%"></i></div>
+                  </div>
+                  <div class="continue-actions">
+                    <button class="btn btn-navy" data-go="editor">Continuar editando</button>
+                    <button class="btn btn-light" data-go="solutions">Ver solución</button>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <section class="recent-modern">
+              <div class="section-title-row">
+                <div><span class="section-kicker">PROYECTOS</span><h2>Proyectos recientes</h2></div>
+                <button class="small-link">Ver todos →</button>
+              </div>
+              <div class="recent-photo-grid">
+                <button class="photo-project" data-go="editor">
+                  <div class="project-photo house-a">
+                    <span class="status-pill editing">EN DISEÑO</span>
+                  </div>
+                  <div class="project-copy">
+                    <h3>Casa Valle Verde</h3>
+                    <p>120 m² · Santiago</p>
+                    <div><span>Actualizado ayer</span><b>→</b></div>
+                  </div>
+                </button>
+                <button class="photo-project" data-go="solutions">
+                  <div class="project-photo house-b">
+                    <span class="status-pill ready">SOLUCIÓN LISTA</span>
+                  </div>
+                  <div class="project-copy">
+                    <h3>Casa Andina</h3>
+                    <p>176 m² · Lo Barnechea</p>
+                    <div><span>Actualizado hace 3 días</span><b>→</b></div>
+                  </div>
+                </button>
+                <button class="photo-project" data-go="export">
+                  <div class="project-photo house-c">
+                    <span class="status-pill review">EN REVISIÓN</span>
+                  </div>
+                  <div class="project-copy">
+                    <h3>Vivienda El Bosque</h3>
+                    <p>95 m² · Providencia</p>
+                    <div><span>Actualizado hace 5 días</span><b>→</b></div>
+                  </div>
+                </button>
+              </div>
+            </section>
+
+            <section class="ai-card-modern">
+              <div class="ai-copy">
+                <span class="ai-badge">NUEVO · IA</span>
+                <h2>De un boceto a una base editable</h2>
+                <p>Sube un dibujo hecho a mano y simula cómo Volcán Proyecta podría interpretarlo como punto de partida.</p>
+                <button class="btn btn-white" id="uploadSketchLink">Subir e interpretar boceto →</button>
+              </div>
+              <div class="ai-visual">
+                <div class="sketch-modern"><i></i><i></i><i></i><i></i></div>
+                <span>→</span>
+                <div class="plan-modern"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="dashboard-side">
+            <section class="side-card quick-modern">
+              <div class="side-title"><h2>Accesos rápidos</h2><span>4 herramientas</span></div>
+              <div class="quick-list">
+                <button data-go="config"><span class="qa red">⌂</span><div><strong>Crear vivienda</strong><small>Comienza desde un modelo base</small></div><b>→</b></button>
+                <button data-demo="Proyecto habitacional"><span class="qa blue">▦</span><div><strong>Proyecto habitacional</strong><small>Configura una propuesta mayor</small></div><b>→</b></button>
+                <button data-demo="Local comercial"><span class="qa violet">▤</span><div><strong>Local comercial</strong><small>Espacios para atención y venta</small></div><b>→</b></button>
+                <button data-demo="Centro de eventos"><span class="qa green">⌂</span><div><strong>Centro de eventos</strong><small>Soluciones para alto tráfico</small></div><b>→</b></button>
+              </div>
+            </section>
+
+            <section class="side-card next-step">
+              <span class="section-kicker">SIGUIENTE PASO</span>
+              <h2>Completa tu solución constructiva</h2>
+              <p>Tu proyecto activo tiene una recomendación pendiente de revisión.</p>
+              <div class="ring-progress"><span>72%</span></div>
+              <button class="btn btn-red full" data-go="solutions">Revisar recomendación</button>
+            </section>
+
+            <section class="side-card support-card">
+              <div class="support-icon">?</div>
+              <h3>¿Necesitas ayuda?</h3>
+              <p>Solicita orientación profesional para revisar tu proyecto.</p>
+              <button class="small-link" data-commercial="advice">Hablar con un especialista →</button>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIG -->
+    <section class="view" data-view="config">
+      <div class="container inner-page">
+        <div class="stepper-modern">
+          <div class="active"><span>1</span><p><b>Diseño</b><small>Configura el proyecto</small></p></div>
+          <i></i>
+          <div><span>2</span><p><b>Solución constructiva</b><small>Sistemas y materiales</small></p></div>
+          <i></i>
+          <div><span>3</span><p><b>Exportación</b><small>Documentos finales</small></p></div>
+        </div>
+
+        <div class="config-layout">
+          <form class="panel modern-form" id="projectForm">
+            <span class="section-kicker">PASO 1</span>
+            <h1>Configura tu proyecto</h1>
+            <p class="muted">Solo necesitamos algunos datos para construir una base inicial.</p>
+
+            <fieldset>
+              <legend>Tipo de proyecto</legend>
+              <div class="type-cards">
+                <label><input type="radio" name="projectType" value="Local comercial"><span>▤</span><b>Local comercial</b></label>
+                <label><input type="radio" name="projectType" value="Centro de eventos"><span>⌂</span><b>Centro de eventos</b></label>
+                <label><input type="radio" name="projectType" value="Proyecto habitacional"><span>▦</span><b>Proyecto habitacional</b></label>
+                <label><input type="radio" name="projectType" value="Vivienda" checked><span>⌂</span><b>Vivienda</b><em>✓</em></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Superficie total</legend>
+              <div class="area-modern">
+                <div class="area-number"><strong id="areaValue">90</strong><span>m²</span></div>
+                <div><input id="areaRange" type="range" min="60" max="120" step="5" value="90"><div class="range-meta"><span>60 m²</span><b id="areaCurrent">90 m²</b><span>120 m²</span></div></div>
+              </div>
+            </fieldset>
+
+            <label class="field-label">Ubicación del proyecto</label>
+            <select id="locationSelect" class="field">
+              <option>Santiago, Región Metropolitana</option>
+              <option>Antofagasta, Región de Antofagasta</option>
+              <option>Concepción, Región del Biobío</option>
+              <option>Puerto Montt, Región de Los Lagos</option>
+            </select>
+
+            <fieldset>
+              <legend>Prioridad principal</legend>
+              <div class="priority-modern">
+                <label><input type="radio" name="priority" value="Estándar"><span>Estándar</span></label>
+                <label><input type="radio" name="priority" value="Aislación térmica" checked><span>Aislación térmica</span></label>
+                <label><input type="radio" name="priority" value="Control acústico"><span>Control acústico</span></label>
+                <label><input type="radio" name="priority" value="Humedad"><span>Humedad</span></label>
+              </div>
+            </fieldset>
+
+            <button class="btn btn-red full large" type="submit">Generar modelo base →</button>
+          </form>
+
+          <aside class="config-preview">
+            <div class="preview-real-house">
+              <span class="preview-badge">MODELO BASE SUGERIDO</span>
+              <div class="preview-summary">
+                <small>Tu configuración</small>
+                <h2 id="summaryType">Vivienda</h2>
+                <ul>
+                  <li><span>Superficie</span><b id="summaryArea">90 m²</b></li>
+                  <li><span>Ubicación</span><b id="summaryLocation">Santiago</b></li>
+                  <li><span>Prioridad</span><b id="summaryPriority">Aislación térmica</b></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-modern"><span>i</span><p>Podrás mover muebles y ajustar dimensiones en la siguiente etapa.</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITOR -->
+    <section class="view" data-view="editor">
+      <div class="editor-top">
+        <div class="container editor-top-inner">
+          <div><span class="section-kicker">EDITOR 2D</span><h1>Vivienda Los Robles</h1></div>
+          <div class="editor-actions">
+            <button class="btn btn-light" id="saveProjectBtn">Guardar</button>
+            <button class="btn btn-red" id="generateSolutionBtn">Generar solución →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="editor-toolbar-modern">
+        <div class="container toolbar-inner">
+          <div class="tool-set">
+            <button class="active">Seleccionar</button><button>Mover</button><button>Medir</button><button id="toggleDimensionsBtn">Acotar</button>
+          </div>
+          <div class="view-set"><button class="active">2D</button><button data-toast="Vista 3D disponible en una siguiente fase">3D</button></div>
+        </div>
+      </div>
+
+      <div class="editor-layout-modern">
+        <aside class="object-panel">
+          <div class="panel-head"><h2>Biblioteca</h2><span>Objetos</span></div>
+          <input id="objectSearch" class="field small" placeholder="Buscar objetos">
+          <div class="object-categories"><button class="active">Muros</button><button>Puertas</button><button>Ventanas</button><button>Muebles</button></div>
+          <div id="objectGrid" class="object-modern-grid">
+            <button data-add="wall">▥<small>Muro</small></button>
+            <button data-add="door">▯<small>Puerta</small></button>
+            <button data-add="window">▦<small>Ventana</small></button>
+            <button data-add="sofa">▰<small>Sofá</small></button>
+            <button data-add="bed">▱<small>Cama</small></button>
+            <button data-add="table">▭<small>Mesa</small></button>
+          </div>
+        </aside>
+
+        <section class="canvas-modern">
+          <div class="plan-canvas" id="planCanvas"><div id="detectedWallsLayer" class="detected-walls-layer"></div>
+            <span class="dim top" data-dimension>9,30 m</span>
+            <span class="dim side" data-dimension>5,50 m</span>
+            <span class="room r1">Dormitorio</span><span class="room r2">Cocina</span><span class="room r3">Baño</span><span class="room r4">Living / Comedor</span>
+            <i class="wall wt" data-plan-object data-type="wall"></i><i class="wall wb" data-plan-object data-type="wall"></i><i class="wall wl" data-plan-object data-type="wall"></i><i class="wall wr" data-plan-object data-type="wall"></i><i class="wall wm1" data-plan-object data-type="wall"></i><i class="wall wm2" data-plan-object data-type="wall"></i><i class="wall wv" data-plan-object data-type="wall"></i>
+            <button class="furniture bed draggable" data-plan-object data-type="bed" style="left:13%;top:18%"></button>
+            <button class="furniture kitchen draggable" data-plan-object data-type="kitchen" style="left:70%;top:17%"></button>
+            <button class="furniture table draggable" data-plan-object data-type="table" style="left:49%;top:68%"></button>
+            <button class="furniture sofa draggable" data-plan-object data-type="sofa" style="left:68%;top:66%"></button>
+          </div>
+          <div class="canvas-controls-modern">
+            <div><button id="zoomOut">−</button><span id="zoomLabel">100%</span><button id="zoomIn">＋</button></div>
+            <label>Mostrar cotas<input id="dimensionsToggle" type="checkbox" checked><i></i></label>
+          </div>
+        </section>
+
+        <aside class="properties-modern">
+          <div class="panel-head"><h2>Propiedades</h2><span id="selectedObjectName">Muro seleccionado</span></div>
+          <div class="property-preview"></div>
+          <div class="prop-grid">
+            <label>Largo<div><input id="wallLength" type="number" value="3.40" step=".1"><span>m</span></div></label>
+            <label>Espesor<div><input id="wallThickness" type="number" value=".15" step=".01"><span>m</span></div></label>
+            <label>Altura<div><input id="wallHeight" type="number" value="2.60" step=".1"><span>m</span></div></label>
+          </div>
+          <label class="field-label">Material</label>
+          <select id="materialSelect" class="field small"><option>Volcanita ST 10</option><option>Volcanita RH</option><option>Volcanita RF</option></select>
+          <label class="field-label">Aislamiento</label>
+          <select id="insulationSelect" class="field small"><option>AislanGlass R100</option><option>AislanGlass R122</option><option>Sin aislación</option></select>
+          <div class="info-modern compact"><span>i</span><p>Las propiedades se aplican al elemento seleccionado.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="view" data-view="solutions">
+      <div class="container inner-page">
+        <div class="stepper-modern">
+          <div><span>1</span><p><b>Diseño</b><small>Configurado</small></p></div><i></i>
+          <div class="active"><span>2</span><p><b>Solución constructiva</b><small>Recomendación</small></p></div><i></i>
+          <div><span>3</span><p><b>Exportación</b><small>Documentos</small></p></div>
+        </div>
+
+        <div class="recommendation-hero">
+          <div><span class="eyebrow">RECOMENDACIÓN VOLCÁN</span><h1>Una solución pensada para tu proyecto.</h1><p id="recommendationCopy">Sistema orientativo para tu vivienda.</p></div>
+          <div class="recommendation-score"><span>Compatibilidad</span><strong>96%</strong><small>Según configuración del piloto</small></div>
+        </div>
+
+        <div class="solutions-layout-modern">
+          <div>
+            <div id="solutionCards" class="solutions-grid-modern"></div>
+            <div class="solution-bottom-actions">
+              <button class="btn btn-light" data-commercial="quote">Cotizar materiales</button>
+              <button class="btn btn-navy" data-commercial="advice">Solicitar asesoría</button>
+              <button class="btn btn-red" data-go="export">Continuar a documentos →</button>
+            </div>
+          </div>
+          <aside class="materials-modern">
+            <div class="panel-head"><h2>Materiales estimados</h2><span>Referencial</span></div>
+            <div id="materialsList"></div>
+            <button class="small-link" data-go="export">Ver listado completo →</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPORT -->
+    <section class="view" data-view="export">
+      <div class="container inner-page">
+        <div class="export-success">
+          <span>✓</span><div><small>PROYECTO LISTO</small><h1>Tu propuesta está preparada para compartir.</h1><p>Descarga documentos, revisa materiales o solicita una cotización.</p></div>
+        </div>
+
+        <div class="export-layout-modern">
+          <section class="documents-modern">
+            <div class="section-title-row"><div><span class="section-kicker">DOCUMENTOS</span><h2>Archivos disponibles</h2></div></div>
+            <div class="doc-grid-modern">
+              <article><span class="doc-icon pdf">PDF</span><h3>Plano del proyecto</h3><p>Vista referencial de distribución.</p><button id="printBtn" class="small-link">Imprimir / PDF →</button></article>
+              <article><span class="doc-icon csv">CSV</span><h3>Memoria de materiales</h3><p>Productos y cantidades.</p><button id="csvBtn" class="small-link">Descargar CSV →</button></article>
+              <article><span class="doc-icon txt">TXT</span><h3>Ficha de soluciones</h3><p>Resumen técnico conceptual.</p><button id="txtBtn" class="small-link">Descargar TXT →</button></article>
+              <article><span class="doc-icon json">JSON</span><h3>Proyecto editable</h3><p>Datos estructurados del piloto.</p><button id="jsonBtn" class="small-link">Descargar JSON →</button></article>
+            </div>
+          </section>
+
+          <aside class="cost-modern">
+            <div class="panel-head"><h2>Estimación</h2><span>CLP</span></div>
+            <div id="exportMaterials"></div>
+            <div class="totals-modern">
+              <div><span>Subtotal</span><b id="subtotalValue">$0</b></div>
+              <div><span>IVA (19%)</span><b id="taxValue">$0</b></div>
+              <div><span>Total estimado</span><strong id="totalValue">$0</strong></div>
+            </div>
+            <button class="btn btn-red full" data-commercial="quote">Solicitar cotización</button>
+          </aside>
+        </div>
+
+        <div class="bottom-modern">
+          <button class="btn btn-light" id="shareBtn">Compartir proyecto</button>
+          <button class="btn btn-light" id="htmlBtn">Descargar resumen HTML</button>
+          <button class="btn btn-navy" data-go="dashboard">Volver a mis proyectos</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="modern-footer">
+    <div class="container footer-inner">
+      <img src="assets/img/volcan-110.png" alt="Volcán">
+      <div><strong>Volcán Proyecta</strong><span>Prototipo conceptual · 2026</span></div>
+      <p>Una experiencia digital para acercar diseño, soluciones y materiales.</p>
+    </div>
+  </footer>
+
+
+  <dialog id="sketchDialog" class="sketch-dialog">
+    <div class="sketch-dialog-inner">
+      <button type="button" class="close-dialog" id="sketchDialogClose">×</button>
+      <span class="section-kicker">INTERPRETACIÓN AUTOMÁTICA · PILOTO</span>
+      <h2>Interpretación del boceto</h2>
+      <p class="muted">El boceto será procesado para generar una interpretación arquitectónica. La IA local intenta reconocer muros, puertas, ventanas, recintos y proporciones antes de convertirlo en una base editable.</p>
+      <p class="muted" id="sketchPrivacyNote">El boceto será procesado mediante IA para generar una interpretación del plano.</p>
+
+      <ul id="sketchStageList" class="sketch-stage-list">
+        <li data-stage="Preparando imagen">○ Preparando imagen</li>
+        <li data-stage="Analizando geometría">○ Analizando geometría</li>
+        <li data-stage="Reconociendo espacios">○ Reconociendo espacios</li>
+        <li data-stage="Detectando posibles aberturas">○ Detectando posibles aberturas</li>
+        <li data-stage="Reconstruyendo plano">○ Reconstruyendo plano</li>
+      </ul>
+
+      <div id="sketchProcessing" class="sketch-processing">
+        <span class="loader-ring"></span>
+        <strong id="sketchStatus">Analizando boceto…</strong>
+        <small>Preparando la imagen y detectando la estructura del plano.</small>
+      </div>
+
+      <div id="sketchError" class="sketch-error" hidden></div>
+
+      <div id="sketchResult" class="sketch-result" hidden>
+        <div class="sketch-result-grid">
+          <div>
+            <span class="result-label">BOCETO ORIGINAL</span>
+            <div class="sketch-image-wrap">
+              <img id="sketchPreviewImage" alt="Boceto cargado">
+            </div>
+          </div>
+          <div>
+            <span class="result-label">PLANO DIGITAL RECONSTRUIDO</span>
+            <div class="detected-plan-preview" id="detectedPlanPreview"></div>
+          </div>
+        </div>
+
+        <div class="interpretation-summary">
+          <div><small>Muros detectados</small><strong id="detectedWallCount">0</strong></div>
+          <div><small>Puertas / ventanas</small><strong id="detectedOpenings">0 / 0</strong></div>
+          <div><small>Recintos detectados</small><strong id="detectedRooms">0</strong></div>
+          <div><small>Confianza general</small><strong id="detectedConfidence">—</strong></div>
+          <div><small>Modo</small><strong id="detectedMethod">Interpretación local</strong></div>
+        </div>
+        <div id="sketchWarnings" class="sketch-warnings" hidden></div>
+
+        <div class="sketch-dialog-actions">
+          <button type="button" class="btn btn-light" id="retrySketchBtn">Elegir otro boceto</button>
+          <button type="button" class="btn btn-light" id="analyzeSketchBtn">Analizar boceto</button>
+          <button type="button" class="btn btn-light" id="editSketchInterpretationBtn">Corregir interpretación</button>
+          <button type="button" class="btn btn-red" id="useSketchBtn">Usar este plano →</button>
+        </div>
+        <div id="sketchCorrectionPanel" class="sketch-correction-panel" hidden></div>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast"></div>
+
+  <dialog id="contactDialog">
+    <form id="contactForm">
+      <button type="button" id="dialogClose" class="close-dialog">×</button>
+      <span class="section-kicker">VOLCÁN PROYECTA</span>
+      <h2 id="dialogTitle">Solicitar asesoría</h2>
+      <p id="dialogText" class="muted">Completa tus datos.</p>
+      <label>Nombre<input required name="name"></label>
+      <label>Correo<input required type="email" name="email"></label>
+      <label>Teléfono<input name="phone"></label>
+      <label>Mensaje<textarea name="message" rows="4"></textarea></label>
+      <button class="btn btn-red full" type="submit">Enviar solicitud</button>
+    </form>
+  </dialog>
+</div>
+<script src="js/data.js"></script>  <script src="js/sketch/sketchSchema.js"></script>
+  <script src="js/sketch/imagePreprocessor.js"></script>
+  <script src="js/sketch/sketchModelValidator.js"></script>
+  <script src="js/sketch/visionClient.js"></script>
+  <script src="js/sketch/sketchInterpreter.js"></script>
+  <script src="js/sketch/geometryNormalizer.js"></script>
+  <script src="js/sketch/topologyValidator.js"></script>
+  <script src="js/sketch/sketchRenderer.js"></script>
+  <script src="js/sketch/sketchToEditor.js"></script>
+  <script src="js/sketch/sketchUpload.js"></script><script src="js/app.js"></script>
+</body>
+</html>

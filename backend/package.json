@@ -1,0 +1,8 @@
+{
+  "name": "volcan-proyecta-sketch-backend",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
